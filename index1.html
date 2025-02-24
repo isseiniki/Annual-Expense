@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Annual Expense Tracker</h1>
+
+        <div class="controls">
+            <label for="year-select">Year:</label>
+            <select id="year-select"></select>
+            <label for="month-select">Month:</label>
+            <select id="month-select"></select>
+        </div>
+
+        <div id="calendar-container">
+            <div id="calendar"></div>
+        </div>
+
+        <div id="selected-date-tab">Selected Date: <span id="selected-date">None</span></div>
+
+        <div id="expense-controls">
+            <h2>Add Expenses</h2>
+            <label for="expense-breakfast">Breakfast:</label>
+            <input type="number" id="expense-breakfast" placeholder="Enter price for breakfast">
+            <button data-expense="breakfast">Add Breakfast</button>
+
+            <label for="expense-lunch">Lunch:</label>
+            <input type="number" id="expense-lunch" placeholder="Enter price for lunch">
+            <button data-expense="lunch">Add Lunch</button>
+
+            <label for="expense-dinner">Dinner:</label>
+            <input type="number" id="expense-dinner" placeholder="Enter price for dinner">
+            <button data-expense="dinner">Add Dinner</button>
+
+            <label for="expense-misc">Miscellaneous:</label>
+            <input type="number" id="expense-misc" placeholder="Enter miscellaneous expenses">
+            <button data-expense="misc">Add Miscellaneous</button>
+
+            <label for="expense-fullDay">Full Day (Including Miscellaneous):</label>
+            <button data-expense="fullDay">Add Full Day</button>
+        </div>
+
+        <div id="total-expenses-container">
+            <h3>Total Expenses: ₹<span id="total-expenses">0</span></h3>
+        </div>
+
+        <div id="notepad">
+            <h2>Notepad</h2>
+            <textarea id="note-input" placeholder="Write your notes here..."></textarea>
+            <button id="save-note">Save Note</button>
+            <button id="delete-note">Delete Note</button>
+        </div>
+
+        <div class="settings">
+            <button id="toggle-theme">Toggle Light/Dark Mode</button>
+            <button id="reset-expenses">Reset Expenses</button>
+            <button id="go-back">Go Back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
